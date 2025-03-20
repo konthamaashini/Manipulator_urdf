@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: d485fa036fcc5871de520c55 / workspace_id: eac92d410471422b33a22f85 -->
+<robot name="manipulator">
+  <!-- Link link_1 -->
+  <link name="link_1">
+    <inertial>
+      <origin xyz="-4.11992e-17 -0.331124 -4.82139e-17" rpy="0 0 0"/>
+      <mass value="18.0382"/>
+      <inertia ixx="0.201986" ixy="0" ixz="5.19931e-10" iyy="0.310803" iyz="0" izz="0.201986"/>
+    </inertial>
+    <!-- Part link_1 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://manipulator_urdf/meshes/assets/link_1.stl"/>
+      </geometry>
+      <material name="link_1_material">
+        <color rgba="0.909804 0.443137 0.0313725 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://manipulator_urdf/meshes/assets/link_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link link_2 -->
+  <link name="link_2">
+    <inertial>
+      <origin xyz="0 3.36307e-17 -0.148328" rpy="0 0 0"/>
+      <mass value="1.90385"/>
+      <inertia ixx="0.01011" ixy="0" ixz="5.76378e-50" iyy="0.0098791" iyz="0" izz="0.00243136"/>
+    </inertial>
+    <!-- Part link_2 -->
+    <visual>
+      <origin xyz="-0.4 -6.93889e-18 -0.55" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://manipulator_urdf/meshes/assets/link_2.stl"/>
+      </geometry>
+      <material name="link_2_material">
+        <color rgba="0.909804 0.443137 0.0313725 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.4 -6.93889e-18 -0.55" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://manipulator_urdf/meshes/assets/link_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from link_1 to link_2 -->
+  <joint name="joint_12" type="revolute">
+    <origin xyz="0 -0.19 2.46519e-32" rpy="1.5708 -6.12934e-32 1.20676e-16"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+</robot>

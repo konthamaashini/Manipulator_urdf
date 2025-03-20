@@ -1,0 +1,8 @@
+{
+    "documentId": "d485fa036fcc5871de520c55",
+    "workspaceId": "eac92d410471422b33a22f85",
+    "assemblyName": "Assembly 1",
+    "robotName": "manipulator",
+    "packageName": "manipulator_urdf/meshes",
+    "outputFormat": "urdf"
+}
